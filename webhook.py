@@ -17,13 +17,13 @@ def webhook():
 #        res = makeResponse(req)
 #        res = json.dumps(res, indent=4)
 #        r = make_response(res)
-         r.headers['Context-Type'] = 'application/json'
-		 speech = "The forecast for London is Sunny"
-         return {
-		"speech": speech,
-		"displayText": speech,
-		"source": "apiai-weather-webhook"
-		}
+#         r.headers['Context-Type'] = 'application/json'
+        speech = "The forecast for London is Sunny"
+        return {
+        "speech": speech,
+        "displayText": speech,
+        "source": "apiai-weather-webhook"
+        }
 
 def makeResponse(req):
         result =req.get("result")
