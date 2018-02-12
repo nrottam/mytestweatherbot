@@ -25,7 +25,7 @@ def makeResponse(req):
         parameters = result.get("parameters")
         city = parameters.get("geo-city")
         date = parameters.get("date")
-        requests.get('api.openweathermap.org/data/2.5/forecast?q='+city+'&&appid=b6907d289e10d714a6e88b30761fae22')
+        requests.get('api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=40c66230d405b5a3797ec5497a397ff1')
         json_object = r.json
         for i in range(0,30):
                 if date in weather[i]['dt_txt']:
