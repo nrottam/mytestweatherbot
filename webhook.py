@@ -14,11 +14,16 @@ def webhook():
         req = request.get_json(silent=True, force=True)
         print(json.dumps(req, indent=4))
 
-        res = makeResponse(req)
-        res = json.dumps(res, indent=4)
-        r = make_response(res)
-        r.headers['Context-Type'] = 'application/json'
-        return r
+#        res = makeResponse(req)
+#        res = json.dumps(res, indent=4)
+#        r = make_response(res)
+         r.headers['Context-Type'] = 'application/json'
+		 speech = "The forecast for London is Sunny"
+         return {
+		"speech": speech,
+		"displayText": speech,
+		"source": "apiai-weather-webhook"
+		}
 
 def makeResponse(req):
         result =req.get("result")
